@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('students', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id');
+
+            $table->string('first_name', 45);
+            $table->string('name_prefix', 20)->nullable();
+            $table->string('last_name', 45);
+            $table->string('initials', 5);
+            $table->string('official_name', 145);
+
+            $table->string('postal_code', 6);
+            $table->string('street', 145);
+            $table->unsignedMediumInteger('house_no');
+            $table->string('house_no_addition', 10)->nullable();
+            $table->string('city', 50);
+
+            $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('students');
+    }
+};
