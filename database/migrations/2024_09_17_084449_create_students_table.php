@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
+            $table->foreignId('user_id')->constrained();
 
             $table->string('first_name', 45);
             $table->string('name_prefix', 20)->nullable();
@@ -25,8 +25,6 @@ return new class extends Migration
             $table->string('city', 50);
 
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
