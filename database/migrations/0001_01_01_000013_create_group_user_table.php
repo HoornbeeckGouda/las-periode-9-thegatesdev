@@ -14,6 +14,7 @@ return new class extends Migration
             $table->timestamps();
             
             $table->foreign('group_id')->references('id')->on('groups');
+            $table->primary(['group_id', 'user_id']);
         });
     }
 

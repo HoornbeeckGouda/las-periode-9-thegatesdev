@@ -12,6 +12,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('courseyear_id')->constrained();
             $table->foreignId('course_id')->constrained();
+            $table->unique(['courseyear_id', 'course_id']);
         });
     }
 
