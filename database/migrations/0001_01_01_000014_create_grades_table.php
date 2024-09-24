@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('grades', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_career_id')->constrained('user_career');
+            $table->foreignId('career_user_id')->constrained('career_user');
             $table->foreignId('subject_id')->constrained();
             $table->string('description');
             $table->timestamps();

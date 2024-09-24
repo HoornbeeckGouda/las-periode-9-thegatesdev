@@ -8,17 +8,17 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('user_group', function (Blueprint $table) {
+        Schema::create('career_user', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('career_id')->constrained();
             $table->foreignId('user_id')->constrained();
-            $table->unsignedSmallInteger('group_id');
-            $table->timestamps();
-            
-            $table->foreign('group_id')->references('id')->on('groups');
+            $table->date('start_date');
+            $table->date('end_date')->nullable();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('user_group');
+        Schema::dropIfExists('career_user');
     }
 };
