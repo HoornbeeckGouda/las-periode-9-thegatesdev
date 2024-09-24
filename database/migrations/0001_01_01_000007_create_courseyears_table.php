@@ -9,7 +9,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('courseyears', function (Blueprint $table) {
-            $table->id('year');
+            $table->id();
+            $table->string('name', 20);
             $table->date('start_date');
             $table->date('end_date');
             $table->timestamps();

@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('careers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('courseyear_id')->constrained('courseyears', 'year');
+            $table->foreignId('courseyear_id')->constrained();
             $table->foreignId('course_id')->constrained();
         });
     }
