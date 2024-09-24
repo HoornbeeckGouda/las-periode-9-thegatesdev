@@ -13,7 +13,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained();
             $table->foreignId('career_id')->constrained();
             $table->date('start_date');
-            $table->date('end_date');
+            $table->date('end_date')->nullable();
         });
     }
 
