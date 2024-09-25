@@ -9,7 +9,6 @@ class Profile extends Model
 {
     protected $fillable = [
         'first_name',
-        'name_prefix',
         'last_name',
         'initials',
         'official_name',
