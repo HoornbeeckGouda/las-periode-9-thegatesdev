@@ -13,7 +13,6 @@ return new class extends Migration
             $table->foreignId('user_id')->unique()->constrained();
 
             $table->string('first_name', 45);
-            $table->string('initials', 5);
             $table->string('last_name', 45);
             $table->string('official_name', 145);
 

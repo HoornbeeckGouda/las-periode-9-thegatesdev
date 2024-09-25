@@ -13,7 +13,6 @@ class Profile extends Model
     protected $fillable = [
         'first_name',
         'last_name',
-        'initials',
         'official_name',
         'postal_code',
         'street',
