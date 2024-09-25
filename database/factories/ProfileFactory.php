@@ -11,11 +11,11 @@ class ProfileFactory extends Factory
         $firstName = fake()->firstName();
         $lastName = fake()->lastName();
         $otherName = fake()->firstName();
+
         return [
             'first_name' => $firstName,
-            'initials' => fake()->boolean(30) ? chr(rand(65,90)) + chr(rand(65,90)) : null,
             'last_name' => $lastName,
-            'official_name' => fake()->randomElement([$firstName + $otherName, $otherName + $firstName, $firstName, $otherName]),
+            'official_name' => fake()->randomElement(["$firstName $otherName", "$firstName $otherName", "$otherName $firstName", $firstName]),
             'postal_code' => fake()->postcode(),
             'street' => fake()->streetName(),
             'house_no' => fake()->numberBetween(1, 300),
