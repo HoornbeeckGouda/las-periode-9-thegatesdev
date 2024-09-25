@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('last_name', 45);
             $table->string('official_name', 145);
 
-            $table->string('postal_code', 6);
+            $table->string('postal_code', 16);
             $table->string('street', 145);
             $table->unsignedMediumInteger('house_no');
             $table->string('house_no_addition', 10)->nullable();
