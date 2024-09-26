@@ -8,9 +8,11 @@ use Illuminate\Database\Seeder;
 
 class UsersSeeder extends Seeder
 {
+    public const MAX = 20;
+
     public function run(): void
     {
-        User::factory(20)->create()->each(function ($user) {
+        User::factory(UsersSeeder::MAX)->create()->each(function ($user) {
             $profile = Profile::factory()->makeOne();
             $user->profile()->save($profile);
         });
