@@ -2,13 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('portal', function(){
-    return view('portal');
-});
+Route::view('/', 'home')->name('home');
+Route::view('/portal', 'portal')->name('portal');
 
-Route::group(['group' => 'app', 'middleware' => ['auth']], function() {
+Route::group(['prefix' => 'app', 'middleware' => ['auth']], function() {
     
 });
