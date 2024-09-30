@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
             UsersSeeder::class,
             DocumentSeeder::class,
             PermissionSeeder::class,
+            SchoolDataSeeder::class,
         ]);
     }
 }
