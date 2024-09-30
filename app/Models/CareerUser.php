@@ -12,6 +12,9 @@ class CareerUser extends Pivot
         'end_date',
     ];
 
+    public $timestamps = false;
+
+
     public function career(): HasOne
     {
         return $this->hasOne(Career::class);

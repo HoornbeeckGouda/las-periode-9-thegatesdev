@@ -15,6 +15,8 @@ class Subject extends Model
         'name',
     ];
 
+    public $timestamps = false;
+
 
     public function courses(): BelongsToMany
     {

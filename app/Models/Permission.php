@@ -9,6 +9,8 @@ class Permission extends Model
 {
     protected $fillable = [];
 
+    public $timestamps = false;
+
 
     public function groups(): BelongsToMany
     {
