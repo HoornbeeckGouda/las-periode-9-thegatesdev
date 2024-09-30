@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Course;
 use App\Models\CourseYear;
 use Illuminate\Database\Seeder;
 
@@ -10,6 +11,7 @@ class SchoolDataSeeder extends Seeder
     public function run(): void
     {
         $this->seedCourseYears();
+        Course::factory(10)->create();
     }
 
 
