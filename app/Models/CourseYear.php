@@ -16,6 +16,8 @@ class CourseYear extends Model
         'end_date',
     ];
 
+    public $timestamps = false;
+
 
     public function careers(): HasMany
     {
