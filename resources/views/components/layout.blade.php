@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title ?? config('app.name') }}</title>
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/scss/app.scss', 'resources/js/app.js'])
 </head>
 <body>
     {{ $slot }}
