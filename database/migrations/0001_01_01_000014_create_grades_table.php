@@ -13,6 +13,7 @@ return new class extends Migration
             $table->foreignId('career_user_id')->constrained('career_user');
             $table->foreignId('subject_id')->constrained();
             $table->string('description');
+            $table->unsignedTinyInteger('number');
             $table->timestamps();
         });
     }
