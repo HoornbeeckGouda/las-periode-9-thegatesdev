@@ -6,6 +6,8 @@ use App\Models\Career;
 use App\Models\CareerUser;
 use App\Models\Course;
 use App\Models\CourseYear;
+use App\Models\Grade;
+use App\Models\Subject;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -48,6 +50,15 @@ class SchoolDataSeeder extends Seeder
                 'user_id' => $user->id,
                 'career_id' => $randomCareers->pop(),
             ]);
+        });
+
+        $careerUsers = CareerUser::all('id');
+        $subjects = Subject::factory(40)->create();
+        Grade::factory(30)->create(function () use ($careerUsers, $subjects) {
+            return [
+                'career_user_id' => $careerUsers->random(),
+                'subject_id' => $subjects->random(),
+            ];
         });
     }
 }
