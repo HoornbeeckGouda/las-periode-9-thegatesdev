@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\Career;
+use App\Models\CareerUser;
 use App\Models\Course;
 use App\Models\CourseYear;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class SchoolDataSeeder extends Seeder
@@ -38,5 +40,14 @@ class SchoolDataSeeder extends Seeder
 
             $date->addDay();
         }
+
+        $randomCareers = Career::all('id')->random(UsersSeeder::MAX);
+
+        User::all('*')->each(function ($user) use ($randomCareers) {
+            CareerUser::factory()->createOne([
+                'user_id' => $user->id,
+                'career_id' => $randomCareers->pop(),
+            ]);
+        });
     }
 }
