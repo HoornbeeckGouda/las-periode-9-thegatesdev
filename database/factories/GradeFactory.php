@@ -10,7 +10,7 @@ class GradeFactory extends Factory
     {
         return [
             'description' => fake()->sentence(),
-            'number' => fake()->numberBetween(0, 255),
+            'number' => fake()->numberBetween(0, 100),
         ];
     }
 }
