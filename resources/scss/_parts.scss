@@ -1,4 +1,4 @@
-.center-display
+.view-center
 {
     min-height: 100%;
 
@@ -7,6 +7,27 @@
     align-items: center;
     justify-content: space-evenly;
     gap: 30px;
+}
+
+.view-hover
+{
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    main
+    {
+        padding: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+
+        background-color: var(--col-prim-dark);
+        border-radius: 10px;
+        box-shadow: 10 15px 40px var(--col-text-dark-fade);
+    }
 }
 
 .nav-ver
@@ -52,4 +73,13 @@
             transform: scale(95%);
         }
     }
+}
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
 }

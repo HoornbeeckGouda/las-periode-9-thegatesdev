@@ -1,4 +1,4 @@
-<x-base class="center-display">
+<x-base class="view-center">
     <header>
         <h1>Laravel College</h1>
         <p class="subtitle">Leven voor het leren</p>
@@ -6,7 +6,7 @@
     <main>
         <nav class="nav-ver nav-button">
             <ul>
-                <li>Inloggen Leerlingen</li>
+                <a href="{{ route('portal') }}"><li>Inloggen Leerlingen</li></a>
             </ul>
         </nav>
     </main>
