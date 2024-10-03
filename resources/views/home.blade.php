@@ -1,8 +1,13 @@
-<x-layout>
-    <x-header>
-        <h1>Leeravel</h1>
-    </x-header>
+<x-base class="center-display">
+    <header>
+        <h1>Laravel College</h1>
+        <p class="subtitle">Leven voor het leren</p>
+    </header>
     <main>
-        <h2>Hello world!</h2>
+        <nav class="nav-ver nav-button">
+            <ul>
+                <li>Inloggen Leerlingen</li>
+            </ul>
+        </nav>
     </main>
-</x-layout>
+</x-base>

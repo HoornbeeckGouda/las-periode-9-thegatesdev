@@ -1,0 +1,55 @@
+.center-display
+{
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.nav-ver
+{
+    ul
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.nav-button
+{
+    font-weight: 600;
+
+    ul
+    {
+        gap: 10px;
+
+        li
+        {
+            cursor: pointer;
+
+            padding: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+
+            outline: 2px solid var(--col-text-light);
+            box-shadow: 4px 4px 4px var(--col-text-dark-fade);
+            transition: transform 100ms ease-in;
+        }
+
+        li:hover
+        {
+            transition: outline 50ms ease-out, transform 100ms ease-in;
+            outline: 4px solid var(--col-text-light);
+        }
+
+        li:active
+        {
+            transition: outline 50ms ease-out;
+            transform: scale(95%);
+        }
+    }
+}

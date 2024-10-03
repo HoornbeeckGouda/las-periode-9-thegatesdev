@@ -7,8 +7,9 @@
     <title>{{ $title ?? config('app.name') }}</title>
 
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])
+    {{ $head ?? '' }}
 </head>
-<body>
+<body {{ $attributes }}>
     {{ $slot }}
 </body>
 </html>

@@ -1,0 +1,13 @@
+:root{
+    --col-text-light: #f3ebff;
+    --col-text-dark: #1A1423;
+    --col-text-dark-fade: #1a142334;
+    
+    --col-prim: #229520;
+    --col-prim-tint: #60a933;
+}   
+
+body{
+    color: var(--col-text-light);
+    background-color: var(--col-prim);
+}
