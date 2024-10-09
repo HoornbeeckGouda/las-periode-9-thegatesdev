@@ -11,6 +11,10 @@
     --col-light: #fff;
     --col-dark: #282828;
     --col-gray: #717171;
+
+    --col-1: var(--col-primary);
+    --col-2: var(--col-light);
+    --col-3: var(--col-secondary);
 }
 
 .primary
@@ -22,7 +26,7 @@
 .secondary
 {
     --col-1: var(--col-secondary);
-    --col-2: var(--col-dark);
+    --col-2: var(--col-light);
 }
 
 .active
@@ -38,8 +42,8 @@
 
 .alert
 {
-    --col-1: var(--col-active);
-    --col-2: var(--col-dark);
+    --col-1: var(--col-alert);
+    --col-2: var(--col-light);
 }
 
 .positive
@@ -52,4 +56,14 @@
 {
     --col-1: var(--col-negative);
     --col-2: var(--col-light);
+}
+
+.dark{
+    --col-1: var(--col-dark);
+    --col-2: var(--col-light);
+}
+
+.light{
+    --col-1: var(--col-light);
+    --col-2: var(--col-dark);
 }

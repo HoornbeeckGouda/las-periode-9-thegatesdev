@@ -1,6 +1,7 @@
 <x-base class="view-portal theme-main primary">
     <div id="root">
         <header>
+            <a class="link" href="{{ route('home') }}">< Terug</a>
             <h2>Log in</h2>
         </header>
         <main>

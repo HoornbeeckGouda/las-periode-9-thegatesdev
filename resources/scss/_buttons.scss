@@ -30,13 +30,18 @@
     {
         background-color: var(--col-1);
         color: var(--col-2);
-        transition: filter 100ms ease-out;
         border-radius: 4px;
 
-        &:hover
+        &.swap
         {
-            transition: filter 20ms ease-out;
-            filter: brightness(115%);
+            border: 3px solid var(--col-1);
+            transition: color 100ms ease-out, background-color 100ms ease-out;
+
+            &:hover
+            {
+                background-color: inherit;
+                color: var(--col-1);
+            }
         }
     }
 }

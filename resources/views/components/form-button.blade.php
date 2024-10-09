@@ -1,5 +1,5 @@
 <button type="submit" class="nobutton">
-    <p {{ $attributes->merge(['class' => 'btn wide active solid hover anim click']) }}>
+    <p {{ $attributes->merge(['class' => 'btn wide secondary solid swap']) }}>
         {{ $slot }}
     </p>
 </button>

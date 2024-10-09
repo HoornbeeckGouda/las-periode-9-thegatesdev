@@ -8,7 +8,7 @@ html
     height: 100%;
 
     user-select: none;
-    background-color: var(--col-primary);
+    background: linear-gradient(to bottom right, var(--col-primary), var(--col-secondary));
     color: var(--col-light);
 
     display: flex;
@@ -23,7 +23,7 @@ html
     width: 100%;
 
     user-select: none;
-    background-color: var(--col-primary);
+    background: linear-gradient(to bottom right, var(--col-primary), var(--col-secondary));
     color: var(--col-light);
 
     display: flex;
@@ -48,9 +48,9 @@ html
         header
         {
             display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+            flex-direction: column;
             align-items: center;
+            gap: 10px;
         }
 
         main

@@ -10,10 +10,10 @@ input[type=text],
 input[type=email],
 input[type=password]
 {
-    border-bottom: 2px solid var(--col-inactive);
+    border-bottom: 2px solid var(--col-gray);
 
     &:focus{
-        border-bottom: 2px solid var(--col-gray);
+        border-bottom: 2px solid var(--col-secondary);
     }
 }
 

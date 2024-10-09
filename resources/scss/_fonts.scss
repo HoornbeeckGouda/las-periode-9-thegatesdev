@@ -68,3 +68,9 @@ input[type=email]
 {
     font-style: italic;
 }
+
+.link{
+    text-decoration: underline;
+    color: var(--col-secondary);
+    cursor: pointer;
+}
