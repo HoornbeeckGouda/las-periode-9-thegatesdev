@@ -1,0 +1,47 @@
+.btn
+{
+    display: block;
+    padding: 10px;
+    background: inherit;
+    text-align: center;
+
+    cursor: pointer;
+    font-weight: 600;
+
+    &.wide
+    {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    &.outline
+    {
+        transition: none;
+        outline: 2px solid var(--col-2);
+
+        &:hover
+        {
+            transition: outline 50ms ease-out;
+            outline: 4px solid var(--col-2);
+        }
+    }
+
+    &.solid
+    {
+        background-color: var(--col-1);
+        color: var(--col-2);
+        transition: filter 100ms ease-out;
+        border-radius: 4px;
+
+        &:hover
+        {
+            transition: filter 20ms ease-out;
+            filter: brightness(115%);
+        }
+    }
+}
+
+button.nobutton
+{
+    all: unset;
+}

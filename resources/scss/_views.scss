@@ -1,0 +1,67 @@
+html
+{
+    height: 100%;
+}
+
+.view-home
+{
+    height: 100%;
+
+    user-select: none;
+    background-color: var(--col-primary);
+    color: var(--col-light);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.view-portal
+{
+    height: 100%;
+    width: 100%;
+
+    user-select: none;
+    background-color: var(--col-primary);
+    color: var(--col-light);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #root
+    {
+        padding: 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+
+        background-color: var(--col-light);
+        color: var(--col-dark);
+        border-radius: 10px;
+        box-shadow: 0 0 15px #0e341318;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        header
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        main
+        {
+            flex: 1;
+
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    }
+}

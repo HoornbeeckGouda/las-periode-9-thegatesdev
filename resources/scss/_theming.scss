@@ -1,0 +1,54 @@
+.theme-main
+{
+    --col-primary: #45da59;
+    --col-secondary: #1ddeae;
+    --col-active: #0927d1;
+    --col-inactive: #8f89b4;
+    --col-alert: #ffc02c;
+    --col-positive: #1fe700;
+    --col-negative: #d60a33;
+
+    --col-light: #fff;
+    --col-dark: #282828;
+}
+
+.primary
+{
+    --col-1: var(--col-primary);
+    --col-2: var(--col-light);
+}
+
+.secondary
+{
+    --col-1: var(--col-secondary);
+    --col-2: var(--col-dark);
+}
+
+.active
+{
+    --col-1: var(--col-active);
+    --col-2: var(--col-light);
+
+    &:disabled
+    {
+        --col-1: var(--col-inactive);
+    }
+}
+
+.alert
+{
+    --col-1: var(--col-active);
+    --col-2: var(--col-dark);
+}
+
+.positive
+{
+    --col-1: var(--col-positive);
+    --col-2: var(--col-light);
+}
+
+.negative
+{
+    --col-1: var(--col-negative);
+    --col-2: var(--col-light);
+}

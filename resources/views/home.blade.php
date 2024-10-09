@@ -1,12 +1,16 @@
-<x-base class="view-center">
+<x-base class="view-home theme-main primary">
     <header>
         <h1>Laravel College</h1>
-        <p class="subtitle">Leven voor het leren</p>
+        <p>Leven voor het leren</p>
     </header>
     <main>
-        <nav class="nav-ver nav-button">
+        <nav>
             <ul>
-                <a href="{{ route('portal') }}"><li>Inloggen Leerlingen</li></a>
+                <li>
+                    <x-button route='portal'>
+                        Inloggen Leerlingen
+                    </x-button>
+                </li>
             </ul>
         </nav>
     </main>

@@ -1,0 +1,15 @@
+.anim
+{
+    display: block;
+
+    &.click
+    {
+        transition: transform 100ms ease-in;
+
+        &:active
+        {
+            transition: none;
+            transform: scale(90%);
+        }
+    }
+}
