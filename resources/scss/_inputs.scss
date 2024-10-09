@@ -1,19 +1,34 @@
 input
 {
     border: 0;
+    padding: 10px;
+    padding-top: 0;
+    margin-bottom: 10px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password]
+{
+    border-bottom: 2px solid var(--col-inactive);
+
+    &:focus{
+        border-bottom: 2px solid var(--col-gray);
+    }
+}
+
+label
+{
     padding: 10px 15px;
 }
 
-label{
-    padding: 10px 15px;
-    padding-bottom: 0;
-}
-
-form{
+form
+{
     inline-size: min-content;
     word-wrap: break-word;
 }
 
-form p{
+form p
+{
     text-wrap: wrap;
 }
