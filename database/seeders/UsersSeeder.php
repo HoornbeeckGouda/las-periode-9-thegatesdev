@@ -12,7 +12,10 @@ class UsersSeeder extends Seeder
 
     public function run(): void
     {
-        User::factory(UsersSeeder::MAX)->create()->each(function ($user) {
+        User::factory()->createOne([
+            'email' => 'admin@example.com',
+        ]);
+        User::factory(UsersSeeder::MAX - 1)->create()->each(function ($user) {
             $profile = Profile::factory()->makeOne();
             $user->profile()->save($profile);
         });
