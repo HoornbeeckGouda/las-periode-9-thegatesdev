@@ -1,4 +1,4 @@
-<x-base class="view-portal theme-main primary">
+<x-base class="view-portal theme-main primary light">
     <div id="root">
         <header>
             <a class="link" href="{{ route('home') }}">< Terug</a>
@@ -8,7 +8,7 @@
             <form action="auth/login" method="post">
                 @csrf
                 <label for="email">Email</label>
-                <input type="email" autocomplete="email" name="email" id="email" placeholder="Email adres...">
+                <input type="email" autocomplete="email" name="email" id="email" placeholder="user@example.com">
                 <label for="password">Wachtwoord</label>
                 <input type="password" autocomplete="current-password" name="password" id="password"
                     placeholder="Wachtwoord...">

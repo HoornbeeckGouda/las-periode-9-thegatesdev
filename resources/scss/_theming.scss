@@ -1,69 +1,69 @@
 .theme-main
 {
-    --col-primary: #45da59;
-    --col-secondary: #1ddeae;
-    --col-active: #0927d1;
-    --col-inactive: #8f89b4;
-    --col-alert: #ffc02c;
-    --col-positive: #1fe700;
-    --col-negative: #d60a33;
+    --defcol-primary: #45da59;
+    --defcol-secondary: #1ddeae;
+    --defcol-active: #0927d1;
+    --defcol-inactive: #8f89b4;
+    --defcol-alert: #ffc02c;
+    --defcol-positive: #1fe700;
+    --defcol-negative: #d60a33;
 
-    --col-light: #fff;
-    --col-dark: #282828;
+    --defcol-light: #fff;
+    --defcol-dark: #282828;
+    --defcol-dark-bg: #484848;
+
     --col-gray: #717171;
-
-    --col-1: var(--col-primary);
-    --col-2: var(--col-light);
-    --col-3: var(--col-secondary);
 }
 
 .primary
 {
-    --col-1: var(--col-primary);
-    --col-2: var(--col-light);
+    --col-main: var(--defcol-primary);
+    --col-tint: var(--defcol-secondary);
 }
 
 .secondary
 {
-    --col-1: var(--col-secondary);
-    --col-2: var(--col-light);
+    --col-main: var(--defcol-secondary);
+    --col-tint: var(--defcol-primary);
 }
 
 .active
 {
-    --col-1: var(--col-active);
-    --col-2: var(--col-light);
+    --col-main: var(--defcol-active);
+    --col-tint: var(--defcol-inactive);
 
-    &:disabled
+    &:disabled, &.disabled
     {
-        --col-1: var(--col-inactive);
+        --col-main: var(--defcol-inactive);
     }
 }
 
 .alert
 {
-    --col-1: var(--col-alert);
-    --col-2: var(--col-light);
+    --col-main: var(--defcol-alert);
+    --col-tint: var(--defcol-negative);
 }
 
 .positive
 {
-    --col-1: var(--col-positive);
-    --col-2: var(--col-light);
+    --col-main: var(--defcol-positive);
+    --col-tint: var(--defcol-secondary);
 }
 
-.negative
+.negativep
 {
-    --col-1: var(--col-negative);
-    --col-2: var(--col-light);
+    --col-main: var(--defcol-negative);
+    --col-tint: var(--defcol-alert);
 }
 
-.dark{
-    --col-1: var(--col-dark);
-    --col-2: var(--col-light);
+.dark
+{
+    --col-fg: var(--defcol-light);
+    --col-bg: var(--defcol-dark-bg);
 }
 
-.light{
-    --col-1: var(--col-light);
-    --col-2: var(--col-dark);
+.light
+{
+    --col-fg: var(--defcol-dark);
+    --col-bg: var(--defcol-light);
 }

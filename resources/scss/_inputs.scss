@@ -1,7 +1,7 @@
 input
 {
     border: 0;
-    padding: 10px;
+    padding: 10px 15px;
     padding-top: 0;
     margin-bottom: 10px;
 }
@@ -13,7 +13,7 @@ input[type=password]
     border-bottom: 2px solid var(--col-gray);
 
     &:focus{
-        border-bottom: 2px solid var(--col-secondary);
+        border-bottom: 2px solid var(--col-main);
     }
 }
 
@@ -26,6 +26,10 @@ form
 {
     inline-size: min-content;
     word-wrap: break-word;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 form p

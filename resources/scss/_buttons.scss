@@ -17,30 +17,30 @@
     &.outline
     {
         transition: none;
-        outline: 2px solid var(--col-2);
+        outline: 2px solid var(--col-fg);
 
         &:hover
         {
             transition: outline 50ms ease-out;
-            outline: 4px solid var(--col-2);
+            outline: 4px solid var(--col-fg);
         }
     }
 
     &.solid
     {
-        background-color: var(--col-1);
-        color: var(--col-2);
+        background-color: var(--col-main);
+        color: var(--col-fg);
         border-radius: 4px;
 
         &.swap
         {
-            border: 3px solid var(--col-1);
+            border: 3px solid var(--col-main);
             transition: color 100ms ease-out, background-color 100ms ease-out;
 
             &:hover
             {
                 background-color: inherit;
-                color: var(--col-1);
+                color: var(--col-main);
             }
         }
     }
@@ -49,5 +49,4 @@
 button.nobutton
 {
     all: unset;
-    cursor: pointer;
 }

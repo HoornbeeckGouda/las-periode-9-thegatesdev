@@ -1,4 +1,4 @@
-<x-base class="view-home theme-main primary">
+<x-base class="view-home theme-main primary dark">
     <header>
         <h1>Laravel College</h1>
         <p>Leven voor het leren</p>
