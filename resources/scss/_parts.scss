@@ -1,0 +1,30 @@
+.form-simple
+{
+    width: 100%;
+
+    div
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=password]
+    {
+        padding: 10px 10px 10px 20px;
+
+        background-color: inherit;
+        border: none;
+        outline: 2px solid var(--col-fg);
+        color: var(--col-fg);
+    }
+
+    label
+    {
+        margin: 10px;
+        margin-left: 0;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+}

@@ -1,26 +1,25 @@
-<x-base class="view-portal theme-main primary light">
-    <div id="root">
+<x-layouts.base class="flex center theme-main primary light">
+    <div class="card flex center gap">
         <header>
-            <a class="link" href="{{ route('home') }}">< Terug</a>
             <h2>Log in</h2>
         </header>
         <main>
-            <form action="auth/login" method="post">
+            <form action="auth/login" method="post" class="form-simple flex gap">
                 @csrf
-                <label for="email">Email</label>
-                <input type="email" autocomplete="email" name="email" id="email" placeholder="user@example.com">
-                <label for="password">Wachtwoord</label>
-                <input type="password" autocomplete="current-password" name="password" id="password"
-                    placeholder="Wachtwoord...">
-                <x-form-button type="submit">Log in</x-form-button>
-                @if ($errors->any())
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li><p>{{ $error }}</p></li>
-                        @endforeach
-                    </ul>
-                @endif
+                <div>
+                    <label for="email">Email adres</label>
+                    <input type="email" name="email" id="email" placeholder="Email adres...">
+                </div>
+                <div>
+                    <label for="password">Wachtwoord</label>
+                    <input type="password" name="password" id="password" placeholder="Wachtwoord...">
+                </div>
+                <div>
+                    <x-buttons.action type="submit" class="solid swap secondary">
+                        Login
+                    </x-buttons.action>
+                </div>
             </form>
         </main>
     </div>
-</x-base>
+</x-layouts.base>

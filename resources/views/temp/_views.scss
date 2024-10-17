@@ -1,12 +1,5 @@
-html
-{
-    height: 100%;
-}
-
 .view-home
 {
-    height: 100%;
-
     user-select: none;
     background: linear-gradient(to bottom right, var(--col-main), var(--col-tint));
     color: var(--col-fg);
@@ -19,9 +12,6 @@ html
 
 .view-portal
 {
-    height: 100%;
-    width: 100%;
-
     user-select: none;
     background: linear-gradient(to bottom right, var(--col-main), var(--col-tint));
     color: var(--col-fg);
@@ -58,4 +48,9 @@ html
             flex: 1;
         }
     }
+}
+
+.view-app-home
+{
+    
 }

@@ -1,17 +1,11 @@
-<x-base class="view-home theme-main primary dark">
+<x-layouts.base class="flex center even theme-main primary dark">
     <header>
         <h1>Laravel College</h1>
-        <p>Leven voor het leren</p>
+        <p>Leven voor het Leren!</p>
     </header>
     <main>
-        <nav>
-            <ul>
-                <li>
-                    <x-button route='portal'>
-                        Inloggen Leerlingen
-                    </x-button>
-                </li>
-            </ul>
-        </nav>
+        <x-buttons.nav route="{{ route('portal') }}" class="wide outline hover anim click">
+            Naar het Portaal
+        </x-buttons.nav>
     </main>
-</x-base>
+</x-layouts.base>

@@ -10,6 +10,6 @@
     {{ $head ?? '' }}
 </head>
 <body {{ $attributes }}>
-    {{ $slot }}
+    
 </body>
 </html>
