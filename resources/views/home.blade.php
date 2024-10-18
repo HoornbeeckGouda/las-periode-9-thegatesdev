@@ -1,5 +1,5 @@
 <x-layouts.base class="flex center even theme-main primary dark">
-    <header>
+    <header class="center-txt">
         <h1>Laravel College</h1>
         <p>Leven voor het Leren!</p>
     </header>

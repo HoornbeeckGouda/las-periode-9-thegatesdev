@@ -1,30 +1,55 @@
+.view
+{
+    user-select: none;
+    background: linear-gradient(to bottom right, var(--col-main), var(--col-tint));
+    color: var(--col-fg);
+}
+
+.card
+{
+    padding: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
+
+    background-color: var(--col-bg);
+    color: var(--col-fg);
+    border-radius: 10px;
+    box-shadow: 5px 5px 50px #00000041;
+}
+
 .form-simple
 {
     width: 100%;
-
-    div
-    {
-        display: flex;
-        flex-direction: column;
-    }
 
     input[type=text],
     input[type=email],
     input[type=password]
     {
-        padding: 10px 10px 10px 20px;
+        padding: 0.8rem 1rem 0.8rem 1rem;
 
-        background-color: inherit;
-        border: none;
-        outline: 2px solid var(--col-fg);
+        font-size: 1.1rem;
+
+        background-color: var(--col-bg-tint);
         color: var(--col-fg);
+        border: none;
+        outline: none;
+
+        &::placeholder
+        {
+            color: var(--col-bg);
+        }
     }
 
     label
     {
-        margin: 10px;
-        margin-left: 0;
-        margin-bottom: 5px;
-        font-weight: bold;
+        font-size: 1rem;
     }
+}
+
+.main-header
+{
+    width: 100%;
+    height: 3.2rem;
+
+    justify-content: space-between;
 }

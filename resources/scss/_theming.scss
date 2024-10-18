@@ -9,10 +9,9 @@
     --defcol-negative: #d60a33;
 
     --defcol-light: #fff;
+    --defcol-light-tint: #e5e5e5;
     --defcol-dark: #282828;
-    --defcol-dark-bg: #484848;
-
-    --col-gray: #717171;
+    --defcol-dark-tint: #424242;
 }
 
 .primary
@@ -59,11 +58,13 @@
 .dark
 {
     --col-fg: var(--defcol-light);
-    --col-bg: var(--defcol-dark-bg);
+    --col-bg: var(--defcol-dark);
+    --col-bg-tint: var(--defcol-dark-tint);
 }
 
 .light
 {
     --col-fg: var(--defcol-dark);
     --col-bg: var(--defcol-light);
+    --col-bg-tint: var(--defcol-light-tint);
 }

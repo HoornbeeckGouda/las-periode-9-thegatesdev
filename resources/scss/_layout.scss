@@ -1,10 +1,3 @@
-.view
-{
-    user-select: none;
-    background: linear-gradient(to bottom right, var(--col-main), var(--col-tint));
-    color: var(--col-fg);
-}
-
 .flex
 {
     display: flex;
@@ -28,23 +21,27 @@
 
     &.gap
     {
-        gap: 15px;
+        gap: 1rem;
+    }
+
+    &.bgap
+    {
+        gap: 1.7rem;
     }
 }
 
-.fill{
+.center-txt
+{
+    text-align: center;
+}
+
+.fill
+{
     width: 100%;
     height: 100%;
 }
 
-.card
+.pad
 {
-    padding: 2em;
-    padding-left: 3em;
-    padding-right: 3em;
-
-    background-color: var(--col-bg);
-    color: var(--col-fg);
-    border-radius: 10px;
-    box-shadow: 5px 5px 50px #00000069;
+    padding: 1rem;
 }
