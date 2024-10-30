@@ -17,7 +17,7 @@ class UsersSeeder extends Seeder
         ]);
         User::factory(UsersSeeder::MAX - 1)->create()->each(function ($user) {
             $profile = Profile::factory()->makeOne();
-            $user->profile()->save($profile);
+            $user->profiles()->save($profile);
         });
     }
 }

@@ -15,6 +15,7 @@ class Grade extends Model
         'career_user_id',
         'subject_id',
         'description',
+        'number',
     ];
 
 

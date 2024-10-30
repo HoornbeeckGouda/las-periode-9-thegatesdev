@@ -29,6 +29,7 @@ class SchoolDataSeeder extends Seeder
 
             $courseYear = CourseYear::factory()->createOne([
                 'name' => "$startYear-$endYear",
+                'short_name' => substr($startYear, -2),
                 'start_date' => $startDate,
                 'end_date' => $endDate,
             ]);

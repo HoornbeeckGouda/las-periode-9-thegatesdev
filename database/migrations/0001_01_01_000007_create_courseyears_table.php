@@ -11,6 +11,7 @@ return new class extends Migration
         Schema::create('course_years', function (Blueprint $table) {
             $table->id();
             $table->string('name', 20);
+            $table->string('short_name', 4);
             $table->date('start_date');
             $table->date('end_date');
         });

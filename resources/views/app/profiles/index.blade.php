@@ -15,40 +15,22 @@
             <th>Acties</th>
         </x-slot:head>
 
-        @foreach ($profiles as $p)
+        @foreach ($list as $item)
             <tr>
                 <td>
-                    <p>{{ "$p->first_name $p->last_name" }}</p>
+                    <p>{{ "$item->first_name $item->last_name" }}</p>
                 </td>
                 <td>
-                    <p>{{ "$p->street $p->house_no$p->house_no_addition" }}</p>
+                    <p>{{ "$item->street $item->house_no$item->house_no_addition" }}</p>
                 </td>
                 <td>
-                    <p>{{ "$p->city" }}</p>
+                    <p>{{ "$item->city" }}</p>
                 </td>
                 <td>
-                    <p>{{ "$p->created_at" }}</p>
+                    <p>{{ "$item->created_at" }}</p>
                 </td>
                 <td>
-                    <p>{{ "$p->updated_at" }}</p>
-                </td>
-                <td>X</td>
-            </tr>
-            <tr>
-                <td>
-                    <p>{{ "$p->first_name $p->last_name" }}</p>
-                </td>
-                <td>
-                    <p>{{ "$p->street $p->house_no$p->house_no_addition" }}</p>
-                </td>
-                <td>
-                    <p>{{ "$p->city" }}</p>
-                </td>
-                <td>
-                    <p>{{ "$p->created_at" }}</p>
-                </td>
-                <td>
-                    <p>{{ "$p->updated_at" }}</p>
+                    <p>{{ "$item->updated_at" }}</p>
                 </td>
                 <td>X</td>
             </tr>

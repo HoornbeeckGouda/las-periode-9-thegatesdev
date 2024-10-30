@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Career extends Model
 {
@@ -18,13 +18,13 @@ class Career extends Model
     public $timestamps = false;
 
 
-    public function courseyear(): HasOne
+    public function course_year(): BelongsTo
     {
-        return $this->hasOne(CourseYear::class);
+        return $this->belongsTo(CourseYear::class);
     }
 
-    public function course(): HasOne
+    public function course(): BelongsTo
     {
-        return $this->hasOne(Course::class);
+        return $this->belongsTo(Course::class);
     }
 }
