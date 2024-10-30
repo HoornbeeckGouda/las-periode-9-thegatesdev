@@ -60,6 +60,7 @@
     --col-fg: var(--defcol-light);
     --col-bg: var(--defcol-dark);
     --col-bg-tint: var(--defcol-dark-tint);
+    --col-bg-extra: black;
 }
 
 .light
@@ -67,4 +68,5 @@
     --col-fg: var(--defcol-dark);
     --col-bg: var(--defcol-light);
     --col-bg-tint: var(--defcol-light-tint);
+    --col-bg-extra: white;
 }
