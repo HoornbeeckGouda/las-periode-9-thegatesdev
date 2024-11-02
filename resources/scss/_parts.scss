@@ -66,6 +66,10 @@
 
     td{
         border: 1px solid var(--col-bg-tint);
+    }
+
+    tr
+    {
         transition: background-color 50ms ease-out;
 
         &:hover{
