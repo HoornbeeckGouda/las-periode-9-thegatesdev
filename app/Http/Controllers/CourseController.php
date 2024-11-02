@@ -8,7 +8,7 @@ class CourseController extends Controller
 {
     public function index()
     {
-        $list = Course::all();
+        $list = Course::withCount(['subjects'])->get();
         return view('app.courses.index', compact('list'));
     }
 }

@@ -3,26 +3,26 @@
         <p>Hello world!</p>
     </x-slot>
 
-    <h2>Loopbanen</h2>
+    <h2>Opleidingen</h2>
 
     <x-datatable class="secondary">
         <x-slot:head>
             <th>Naam</th>
-            <th>Jaar</th>
-            <th>Opleiding</th>
+            <th>Laatst actief</th>
+            <th>Aantal vakken</th>
             <th>Acties</th>
         </x-slot:head>
 
         @foreach ($list as $item)
             <tr>
                 <td>
-                    <p>{{ "{$item->course->prefix}.{$item->course_year->short_name}" }}</p>
+                    <p>{{ $item->name }}</p>
                 </td>
                 <td>
-                    <p>{{ "{$item->course_year->name}" }}</p>
+                    <p>{{ $item->lastCourseYear->name ?? 'Niet actief geweest' }}</p>
                 </td>
                 <td>
-                    <p>{{ "{$item->course->name}" }}</p>
+                    <p>{{ $item->subjects_count }}</p>
                 </td>
                 <td>X</td>
             </tr>

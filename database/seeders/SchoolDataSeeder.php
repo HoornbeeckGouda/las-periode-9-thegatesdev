@@ -15,7 +15,7 @@ class SchoolDataSeeder extends Seeder
 {
     public function run(): void
     {
-        Course::factory(10)->create();
+        $courses = Course::factory(10)->create();
         $date = now();
         if ($date->month < 8) $date->subYear();
         $date->setMonth(8)->setDay(1);
@@ -34,7 +34,7 @@ class SchoolDataSeeder extends Seeder
                 'end_date' => $endDate,
             ]);
             $courseCount = fake()->numberBetween(6, 10);
-            Course::all('id')->random($courseCount)->each(function ($course) use ($courseYear) {
+            $courses->random($courseCount)->each(function ($course) use ($courseYear) {
                 Career::factory()->createOne([
                     'course_year_id' => $courseYear,
                     'course_id' => $course,
@@ -60,6 +60,9 @@ class SchoolDataSeeder extends Seeder
                 'career_user_id' => $careerUsers->random(),
                 'subject_id' => $subjects->random(),
             ];
+        });
+        $courses->each(function ($course) use ($subjects) {
+            $course->subjects()->saveMany($subjects->random(fake()->numberBetween(5, 15)));
         });
     }
 }

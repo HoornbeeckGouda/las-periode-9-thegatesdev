@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -32,11 +34,19 @@ class Course extends Model
 
     public function courseYears(): BelongsToMany
     {
-        return $this->belongsToMany(CourseYear::class);
+        return $this->belongsToMany(CourseYear::class, 'careers');
     }
 
     public function careerUser(): HasManyThrough
     {
         return $this->hasManyThrough(CareerUser::class, Career::class);
+    }
+
+
+    protected function lastCourseYear(): Attribute
+    {
+        return Attribute::make(function () {
+            return $this->courseYears()->latest('start_date')->first();
+        });
     }
 }

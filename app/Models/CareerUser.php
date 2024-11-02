@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 
 class CareerUser extends Pivot
 {
-    use HasFactory;
+    use HasFactory; # put in single user view
 
     protected $fillable = [
         'start_date',

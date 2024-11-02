@@ -16,7 +16,6 @@ Route::view('/portal', 'portal')->name('portal');
 
 Route::middleware(['auth'])->prefix('app')->name('app.')->group(function () {
     Route::view('/', 'app.home')->name('home');
-    Route::resource('careers', CareerController::class);
     Route::resource('courses', CourseController::class);
     Route::resource('courseyears', CourseYearController::class);
     Route::resource('documents', DocumentController::class);
