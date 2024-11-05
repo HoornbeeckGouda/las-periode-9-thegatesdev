@@ -5,7 +5,7 @@
 
     <h2>Gebruikers</h2>
 
-    <x-table.layout class="sticky border hover secondary">
+    <x-table.interactive class="sticky border hover secondary">
         <x-slot:head>
             <th>E-mail</th>
             <th>Gemaakt op</th>
@@ -27,5 +27,5 @@
                 <td>X</td>
             </tr>
         @endforeach
-    </x-table.layout>
+    </x-table.interactive>
 </x-layout.app>

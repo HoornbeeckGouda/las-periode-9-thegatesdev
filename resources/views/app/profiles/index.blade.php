@@ -5,7 +5,7 @@
 
     <h2>Profielen</h2>
 
-    <x-table.layout class="sticky border hover secondary">
+    <x-table.interactive class="sticky border hover secondary">
         <x-slot:head>
             <th>Naam</th>
             <th>Adres</th>
@@ -35,5 +35,5 @@
                 <td>X</td>
             </tr>
         @endforeach
-    </x-table.layout>
+    </x-table.interactive>
 </x-layout.app>
