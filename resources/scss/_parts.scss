@@ -7,14 +7,78 @@
 
 .card
 {
-    padding: 2em;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding: 1.4em;
+    padding-left: 2.4em;
+    padding-right: 2.4em;
 
     background-color: var(--col-bg);
     color: var(--col-fg);
-    border-radius: 10px;
+    border-radius: 0.15rem;
     box-shadow: 5px 5px 50px #00000041;
+}
+
+.table
+{
+    width: 100%;
+    background-color: var(--col-bg);
+
+    thead
+    {
+        background-color: var(--col-main);
+        font-weight: bold;
+    }
+
+    &.sticky thead
+    {
+        position: sticky;
+        top: 0px;
+    }
+
+    td,
+    th
+    {
+        padding: 0.9rem;
+        text-align: left;
+    }
+
+    &.border
+    {
+        border-collapse: separate;
+
+        th,
+        td
+        {
+            border: 1px solid var(--col-bg-tint);
+            border-left: none;
+        }
+
+        td
+        {
+            border-top: none;
+        }
+
+        tr > th:first-child,
+        tr > td:first-child
+        {
+            border-left: 1px solid var(--col-bg-tint);
+        }
+    }
+
+    &.hover
+    {
+
+        tbody tr,
+        th
+        {
+            transition: background-color 50ms ease-out;
+
+            &:hover
+            {
+                transition: none;
+                background-color: var(--col-bg-extra);
+            }
+        }
+    }
 }
 
 .form-simple
@@ -51,41 +115,4 @@
     width: 100%;
 
     justify-content: space-between;
-}
-
-.datatable
-{
-    width: 100%;
-
-    td,
-    th
-    {
-        padding: 5px;
-        text-align: left;
-    }
-
-    td{
-        border: 1px solid var(--col-bg-tint);
-    }
-
-    tr
-    {
-        transition: background-color 50ms ease-out;
-
-        &:hover{
-            transition: none;
-            background-color: var(--col-bg-extra);
-        }
-    }
-
-    th{
-        position: sticky;
-        top: 0px;
-        background-color: var(--col-main);
-    }
-
-    thead
-    {
-        font-weight: bold;
-    }
 }

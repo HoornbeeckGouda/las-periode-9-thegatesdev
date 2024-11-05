@@ -1,11 +1,11 @@
-<x-layouts.app class="flex gap scroll">
+<x-layout.app class="flex gap scroll">
     <x-slot:header>
         <p>Hello world!</p>
     </x-slot>
 
     <h2>Opleidingen</h2>
 
-    <x-datatable class="secondary">
+    <x-table.layout class="sticky border hover secondary">
         <x-slot:head>
             <th>Naam</th>
             <th>Laatst actief</th>
@@ -27,5 +27,5 @@
                 <td>X</td>
             </tr>
         @endforeach
-    </x-datatable>
-</x-layouts.app>
+    </x-table.layout>
+</x-layout.app>

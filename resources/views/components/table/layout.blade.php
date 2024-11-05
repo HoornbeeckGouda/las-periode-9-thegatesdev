@@ -1,5 +1,5 @@
 <div class="scroll">
-    <table {{ $attributes->class(['datatable']) }}>
+    <table {{ $attributes->class(['table']) }}>
         <thead>
             <tr>
                 {{ $head }}

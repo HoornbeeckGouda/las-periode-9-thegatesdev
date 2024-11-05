@@ -8,10 +8,12 @@
     --defcol-positive: #1fe700;
     --defcol-negative: #d60a33;
 
-    --defcol-light: #fff;
-    --defcol-light-tint: #e5e5e5;
+    --defcol-light: #ffffff;
+    --defcol-light-tint: #a8a8a8;
+    --defcol-light-extra: #eaeaea;
     --defcol-dark: #282828;
     --defcol-dark-tint: #424242;
+    --defcol-dark-extra: #000;
 }
 
 .primary
@@ -60,7 +62,7 @@
     --col-fg: var(--defcol-light);
     --col-bg: var(--defcol-dark);
     --col-bg-tint: var(--defcol-dark-tint);
-    --col-bg-extra: black;
+    --col-bg-extra: var(--defcol-dark-extra);
 }
 
 .light
@@ -68,5 +70,5 @@
     --col-fg: var(--defcol-dark);
     --col-bg: var(--defcol-light);
     --col-bg-tint: var(--defcol-light-tint);
-    --col-bg-extra: white;
+    --col-bg-extra: var(--defcol-light-extra);
 }
