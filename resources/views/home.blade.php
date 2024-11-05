@@ -4,7 +4,7 @@
         <p>Leven voor het Leren!</p>
     </header>
     <main>
-        <x-button.nav route="{{ route('portal') }}" class="wide outline hover anim click">
+        <x-button.nav route="{{ route('login') }}" class="wide outline hover anim click">
             Naar het Portaal
         </x-button.nav>
     </main>
