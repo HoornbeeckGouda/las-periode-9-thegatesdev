@@ -14,7 +14,10 @@ Route::view('/', 'home')->name('home');
 
 Route::middleware(['auth'])->prefix('app')->name('app.')->group(function () {
     Route::view('/', 'app.home')->name('home');
+
+    Route::get('/courses/table', [CourseController::class, 'table']);
     Route::resource('courses', CourseController::class);
+
     Route::resource('courseyears', CourseYearController::class);
     Route::resource('documents', DocumentController::class);
     Route::resource('grades', GradeController::class);

@@ -11,4 +11,9 @@ class CourseController extends Controller
         $list = Course::withCount(['subjects'])->get();
         return view('app.courses.index', compact('list'));
     }
+
+    public function table()
+    {
+        return $this->index()->fragment('table');
+    }
 }

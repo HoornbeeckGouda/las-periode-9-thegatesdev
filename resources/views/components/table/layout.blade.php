@@ -1,5 +1,5 @@
-<div class="scroll">
-    <table {{ $attributes->class(['table']) }}>
+<div class="scroll" {{ $attributes->only(['id']) }}>
+    <table {{ $attributes->class(['table'])->except(['id']) }}>
         <thead>
             <tr>
                 {{ $head }}
