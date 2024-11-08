@@ -19,6 +19,11 @@
         justify-content: space-evenly;
     }
 
+    &.around
+    {
+        justify-content: space-around;
+    }
+
     &.gap
     {
         gap: 1rem;

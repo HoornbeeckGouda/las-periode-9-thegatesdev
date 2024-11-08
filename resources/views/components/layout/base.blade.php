@@ -1,3 +1,5 @@
+@props(['head', 'title'])
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

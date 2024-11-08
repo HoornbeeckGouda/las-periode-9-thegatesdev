@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "htmx.org": "^1.9.12",
+        "hyperscript.org": "^0.9.13",
         "sass-embedded": "^1.79.4"
     }
 }

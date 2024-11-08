@@ -13,7 +13,7 @@
     --defcol-light-extra: #eaeaea;
     --defcol-dark: #282828;
     --defcol-dark-tint: #424242;
-    --defcol-dark-extra: #000;
+    --defcol-dark-extra: #1a1a1a;
 }
 
 .primary
@@ -51,7 +51,7 @@
     --col-tint: var(--defcol-secondary);
 }
 
-.negativep
+.negative
 {
     --col-main: var(--defcol-negative);
     --col-tint: var(--defcol-alert);

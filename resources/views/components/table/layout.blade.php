@@ -1,6 +1,8 @@
+@props(['head'])
+
 <div class="scroll" {{ $attributes->only(['id']) }}>
     <table {{ $attributes->class(['table'])->except(['id']) }}>
-        <thead>
+        <thead class="dark">
             <tr>
                 {{ $head }}
             </tr>

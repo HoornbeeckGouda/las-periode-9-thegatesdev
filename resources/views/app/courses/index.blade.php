@@ -1,9 +1,9 @@
+@props(['courses'])
+
 <x-layout.app class="flex gap scroll">
     <x-slot:header>
-        <p>Hello world!</p>
+        <x-part.nav current="app.courses.index"/>
     </x-slot>
-
-    <h2>Opleidingen</h2>
 
     <x-table.interactive>
         <x-slot:head>
@@ -13,19 +13,19 @@
             <th>Acties</th>
         </x-slot:head>
 
-        @foreach ($list as $item)
-            <tr>
+        @foreach ($courses as $course)
+            <x-table.tr :item_id="$course->id" route="app.courses.show">
                 <td>
-                    <p>{{ $item->name }}</p>
+                    <p>{{ $course->name }}</p>
                 </td>
                 <td>
-                    <p>{{ $item->lastCourseYear->name ?? 'Niet actief geweest' }}</p>
+                    <p>{{ $course->lastCourseYear->name ?? 'Niet actief geweest' }}</p>
                 </td>
                 <td>
-                    <p>{{ $item->subjects_count }}</p>
+                    <p>{{ $course->subjects_count }}</p>
                 </td>
                 <td>X</td>
-            </tr>
+            </x-table.tr>
         @endforeach
     </x-table.interactive>
 </x-layout.app>
