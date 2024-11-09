@@ -159,7 +159,7 @@
 
 .collapse
 {
-    background-color: var(--col-bg-extra);
+    background-color: var(--col-bg-tint);
 
     .content, >button
     {
@@ -168,9 +168,10 @@
         color: var(--col-fg);
     }
 
-    .content
+    >button
     {
-        background-color: var(--col-bg-tint);
+        background-color: var(--col-bg-extra);
+        cursor: pointer;
     }
 
     &.hide
