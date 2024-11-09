@@ -37,7 +37,7 @@ class Course extends Model
         return $this->belongsToMany(CourseYear::class, 'careers');
     }
 
-    public function careerUser(): HasManyThrough
+    public function careerUsers(): HasManyThrough
     {
         return $this->hasManyThrough(CareerUser::class, Career::class);
     }
