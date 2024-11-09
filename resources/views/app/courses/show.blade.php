@@ -2,7 +2,8 @@
 
 <x-part.modal>
     <h3>Opleiding {{ "($course->prefix)" }} <b>{{ $course->name }}</b></h3>
-    <x-part.collapse text="Vakken">
+    <p>Laatst actief: {{ $course->lastCourseYear->name }}</p>
+    <x-part.collapse text='Vakken {{ "($course->subjects_count)" }}'>
         <ul>
             @foreach ($course->subjects as $subject)
                 <li><p>{{ $subject->name }}</p></li>

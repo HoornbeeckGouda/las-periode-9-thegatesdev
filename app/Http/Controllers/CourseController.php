@@ -18,7 +18,7 @@ class CourseController extends Controller
     public function show(string $id)
     {
         $course = Cache::remember("course_$id", 120, function () use ($id) {
-            return Course::findOrFail($id);
+            return Course::withCount(['subjects'])->findOrFail($id);
         });
         return view('app.courses.show', compact('course'));
     }
