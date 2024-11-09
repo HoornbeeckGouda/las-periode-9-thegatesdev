@@ -16,7 +16,7 @@ class SchoolDataSeeder extends Seeder
     public function run(): void
     {
         $courses = Course::factory(10)->create();
-        $date = now();
+        $date = now()->subYears(5);
         if ($date->month < 8) $date->subYear();
         $date->setMonth(8)->setDay(1);
 
