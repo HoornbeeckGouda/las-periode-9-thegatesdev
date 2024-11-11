@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('career_user', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('career_id')->constrained();
+            $table->foreignId('career_id')->constrained()->cascadeOnDelete();
             $table->foreignId('user_id')->constrained();
             $table->date('start_date');
             $table->date('end_date')->nullable();

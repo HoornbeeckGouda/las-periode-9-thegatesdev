@@ -24,6 +24,11 @@
         justify-content: space-around;
     }
 
+    &.between
+    {
+        justify-content: space-between;
+    }
+
     &.gap
     {
         gap: 1rem;
@@ -43,6 +48,16 @@
 .fill
 {
     width: 100%;
+    height: 100%;
+}
+
+.fill-x
+{
+    width: 100%;
+}
+
+.fill-y
+{
     height: 100%;
 }
 

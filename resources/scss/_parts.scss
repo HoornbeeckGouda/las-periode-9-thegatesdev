@@ -7,14 +7,17 @@
 
 .card
 {
-    padding: 1.4em;
-    padding-left: 2.4em;
-    padding-right: 2.4em;
-
     background-color: var(--col-bg);
     color: var(--col-fg);
     border-radius: 0.15rem;
     box-shadow: 5px 5px 50px #00000041;
+
+    .pad, &.pad
+    {
+        padding: 1.4em;
+        padding-left: 2.4em;
+        padding-right: 2.4em;
+    }
 }
 
 .table
@@ -128,6 +131,18 @@
     z-index: 1000;
     animation: fadeIn 150ms ease;
 
+    header
+    {
+        background-color: var(--col-bg-extra);
+    }
+
+    main
+    {
+        margin: 2.4em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
     >.underlay
     {
         position: absolute;
@@ -136,10 +151,12 @@
         bottom: 0;
         left: 0;
         right: 0;
+        cursor: pointer;
     }
 
     >.content
     {
+        max-height: 90%;
         width: 80%;
         max-width: 1000px;
 

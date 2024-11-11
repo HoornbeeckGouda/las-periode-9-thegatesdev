@@ -1,9 +1,17 @@
+@props(['slot', 'header', 'footer'])
+
 <div class="modal flex center" _="on closeModal add .closing then wait for animationend then remove me">
     <div class="underlay" _="on click trigger closeModal"></div>
-    <div class="content card">
-        <span class="closemark" _="on click trigger closeModal">&times;</span>
-        <div {{ $attributes->class('flex gap') }}>
+    <form {{ $attributes->class('content card scroll flex gap') }}>
+        <header class="flex row between fill-x center-txt pad">
+            {{ $header ?? '' }}
+            <span class="closemark" _="on click trigger closeModal">&times;</span>
+        </header>
+        <main class="flex gap scroll">
             {{ $slot ?? '' }}
-        </div>
-    </div>
+        </main>
+        <footer class="flex row gap pad">
+            {{ $footer ?? '' }}
+        </footer>
+    </form>
 </div>

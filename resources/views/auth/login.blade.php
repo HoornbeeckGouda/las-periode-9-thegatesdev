@@ -1,6 +1,6 @@
 <x-layout.base class="flex center theme-main primary dark">
     <div>
-        <div class="card flex center bgap">
+        <div class="card pad flex center bgap">
             <header>
                 <h2>Log in</h2>
             </header>
